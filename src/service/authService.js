@@ -15,7 +15,9 @@ async function authService(authDetails){
     if(!isPasswordValid){
         throw{message: 'password incorrect', statusCode: 401}
     }
-    const token = jwt.sign({email : user.email, id : user.id},
+
+    const userRole = user.role ? user.role : 'USER'
+    const token = jwt.sign({email : user.email, id : user.id, role : userRole},
         JWT_SECRET,
         {expiresIn : JWT_EXPIRE}
     )
