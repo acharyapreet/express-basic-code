@@ -5,7 +5,8 @@ const cartSchema = new mongoose.Schema({
         //refrencing the user model called association
         type : mongoose.Schema.Types.ObjectId,
         required : true,
-        ref : 'User'
+        ref : 'User',
+        unique : true
     },
     //items having array of products refrence through product
     items : [

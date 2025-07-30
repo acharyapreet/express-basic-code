@@ -1,5 +1,5 @@
 const {findUser, createUser} = require('../repository/userRepository');
-
+const {createCart} = require('../repository/cartRepository');
 //function to create a new user
 async function signUpUser(userDetail){
 // check if user already exists by email and mobile number
@@ -18,11 +18,14 @@ async function signUpUser(userDetail){
         email : userDetail.email,
         name : userDetail.name,
         password : userDetail.password,
-        mobileNo : userDetail.mobileNo
+        mobileNo : userDetail.mobileNo,
+        
     })
     if(!newUser){
         throw {reason : "error in creating user", statusCode : 500};
     };
+
+    await createCart(newUser._id)
     return newUser;
 }
 module.exports = {

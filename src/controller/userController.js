@@ -11,7 +11,7 @@ async function userController(req,res){
             error : {}
         })
     } catch (error) {
-        return res.status(error.statusCode).json({
+        return res.status(error.statusCode||500).json({
             success : false,
             message : error.message,
             data : {},
