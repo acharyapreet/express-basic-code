@@ -16,6 +16,10 @@ const productSchema = new mongoose.Schema({
         type : Number,
         required : [true,'price is required']
     },
+    quantity : {
+        type : Number,
+        default : 10
+    },
     category : {
         type : String,
         enum : ['veg', 'drink'],

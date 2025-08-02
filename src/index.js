@@ -47,15 +47,15 @@ app.listen(serverConfig.PORT, async () => {
      connectDB()
     console.log(`server is running on port ${serverConfig.PORT}`)
 
-//     const newUser = await User.create({
-//         name : "Preet Acharya",
-//         email : "abcd@gmail.com",
-//         password : "hello123",
-//         mobileNo : 1234567852,
-//         role : 'ADMIN'
-//     })
-//     console.log("Created new user");
-//     console.log(newUser);
+    // const newUser = await User.create({
+    //     name : "Preet Acharya",
+    //     email : "abcd@gmail.com",
+    //     password : "hello123",
+    //     mobileNo : 1234567852,
+    //     role : 'ADMIN'
+    // })
+    // console.log("Created new user");
+    // console.log(newUser);
 
 })
 
