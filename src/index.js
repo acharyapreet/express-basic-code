@@ -12,6 +12,7 @@ const uploader = require('./middleware/multerMiddleware')
 const cloudinary = require('./config/cloudinaryConfig')
 const fs = require('fs/promises')
 const imageRouter = require('./route/imageRoutes')
+const orderRouter = require('./route/orderRoutes')
 //making express app
 const app = express()
 
@@ -25,6 +26,7 @@ app.use('/users',userRouter)
 app.use('/cart',cartRouter)
 app.use('/auth',authRouter)
 app.use('/products',imageRouter)
+app.use('/order',orderRouter);
 //making demo api
 app.post('/pong', isLoggedIn, (req,res) => {
     console.log(req.body)

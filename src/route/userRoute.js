@@ -1,8 +1,9 @@
 const express = require('express')
-const {userController} = require('../controller/userController')
+const { signUpUSerController } = require('../../../task manager/src/controller/userController');
 const userRouter = express.Router()
 
-userRouter.post('/',userController)
+userRouter.post('/',signUpUSerController)
 
-module.exports = userRouter
+module.exports = userRouter;
+
 

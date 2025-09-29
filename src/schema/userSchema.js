@@ -20,6 +20,9 @@ const userSchema = new mongoose.Schema({
         required : true,
         trim : true
     },
+    address : {
+        type : String
+    },
     mobileNo : {
         type : Number,
         required : true,

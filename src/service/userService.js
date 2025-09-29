@@ -24,7 +24,8 @@ async function signUpUser(userDetail){
     if(!newUser){
         throw {reason : "error in creating user", statusCode : 500};
     };
-    
+    //new order
+    await 
 
     await createCart(newUser._id)
     return newUser;
