@@ -28,7 +28,7 @@ app.use('/auth',authRouter)
 app.use('/products',imageRouter)
 app.use('/order',orderRouter);
 //making demo api
-app.post('/pong', (req,res) => {
+app.get('/pong', (req,res) => {
     console.log(req.body)
     console.log(req.cookies)
     return res.json({message : "pong"})
